@@ -15,13 +15,12 @@ import java.util.Optional;
 @Repository
 @Transactional
 public interface PersonRepository extends JpaRepository<Person, ComposeId> {
-	@Query(value = "select p from Person p where p.city_of_living = :city_of_living")
-	List<Person> findByCity_of_living(@Param("city_of_living") String City_of_living);
+	@Query(value = "select p from Person p where p.cityOfLiving = :cityOfLiving")
+	List<Person> findByCityOfLiving(@Param("cityOfLiving") String cityOfLiving);
 
 	@Query(value = "select p from Person p where p.composeId.age < :age")
 	List<Person> findByAgeOrderByAgeAsc(@Param("age") int age, Sort sort);
 
 	@Query(value = "select p from Person p where p.composeId.name = :name and p.composeId.surname = :surname")
 	Optional<Person> findByNameAndSurname(@Param("name") String name, @Param("surname") String surname);
-
 }

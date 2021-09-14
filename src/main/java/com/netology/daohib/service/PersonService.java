@@ -17,7 +17,7 @@ public class PersonService {
 	}
 
 	public List<Person> getPersonsByCity(String city){
-		return repository.findByCity_of_living(city);
+		return repository.findByCityOfLiving(city);
 	}
 
 	public List<Person> getPersonsByAgeOrderByAgeAsc(int age){

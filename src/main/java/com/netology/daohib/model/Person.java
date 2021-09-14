@@ -17,9 +17,9 @@ public class Person implements Serializable {
 	@EmbeddedId
 	private ComposeId composeId;
 
-	@Column(name = "phone_number")
-	private String phone_number;
+	@Column(name = "phoneNumber")
+	private String phoneNumber;
 
-	@Column(name = "city_of_living")
-	private String city_of_living;
+	@Column(name = "cityOfLiving")
+	private String cityOfLiving;
 }
